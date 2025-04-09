@@ -1,0 +1,32 @@
+import bloques.*
+
+describe "Rutinas de Roque" {
+    test "rutina 1" {
+        roque.rutina({ ave => 
+            ave.volar(5)
+            ave.comer(alpiste)
+        })
+        roque.entrenar()
+        assert.equals(105,pepita.energia())
+    }
+
+    test "rutina 2" {
+        roque.rutina({ ave =>
+            ave.volar(5)
+            ave.comer(alpiste)
+            ave.volar(5)
+        })
+        roque.entrenar()
+        assert.equals(90,pepita.energia())
+    }
+
+    test "rutina 3" {
+        roque.rutina({ ave =>
+            ave.comer(alpiste)
+            ave.volar(1000)
+            ave.comer(alpiste)
+        })
+        assert.throwsException({roque.entrenar()})
+        assert.equals(120,pepita.energia())
+    }
+}

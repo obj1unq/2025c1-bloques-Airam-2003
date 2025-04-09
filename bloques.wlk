@@ -21,7 +21,6 @@ object pepita {
   method comer(alimento) {
     energia = energia + alimento.energiaQueAporta()
   }
-
 }
 
 object alpiste {
@@ -41,5 +40,28 @@ object miAsserter {
       } 
       
     }
+}
 
+object roque {
+  var rutina = {}
+	var ave = pepita
+	var cenas = 0
+	
+  method rutina(_rutina) {
+    rutina = _rutina
+  }
+
+	method ave(_ave) {
+		ave = _ave
+		cenas = 0
+	}
+
+	method alimentar(alimento) {
+		ave.comer(alimento)
+		cenas += 1
+	}
+
+  method entrenar() {
+    rutina.apply(ave)
+  }
 }

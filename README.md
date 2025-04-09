@@ -49,8 +49,7 @@ Sí! se puede parametrizar utilizando `=>` para separar los parámetros, por eje
 ```
 
 Ahora bien, así como el que envía el mensaje apply conoce de antemano si se trata de una orden o una consulta, para saber si tiene
-que trabajar con el resultado o no, también debe conocer de antemano con cuantos parámetros trabaja el bloque, para utilizar el apply
-con la cantidad de parámetros que corresponde:
+que trabajar con el resultado o no, también debe conocer de antemano con cuantos parámetros trabaja el bloque, para utilizar el apply con la cantidad de parámetros que corresponde:
 
 ```
     bloqueComerAlpiste.apply(pepita)
@@ -63,11 +62,9 @@ La separación de la definición de un comportamiento del momento en que se debe
 en la modulación de nuestro sistema. La separación de módulos es una manera de agrupar distintas partes del sistema. Generalmente
 un módulo ofrece algún servicio a otro módulo, evitando que se conozcan detalles de implementación. 
 
-En el caso de wollok, un ejemplo de esto es el módulo de testing. Las clase assert puede ser visto como parte de un módulo de testing
-que ofrece el servicio de testear un comportamiento, para el uso de casos normales no se nesecita un bloque, pero que hay si queremos testear que un objeto lanza excepción?
+En el caso de wollok, un ejemplo de esto es el módulo de testing. Las clase assert puede ser visto como parte de un módulo de testing que ofrece el servicio de testear un comportamiento, para el uso de casos normales no se nesecita un bloque, pero que hay si queremos testear que un objeto lanza excepción?
 
-Si ejecuto el código que lanza error en el mismo test, se corta el flujo de ejecución. Lo que necesitamos es que el módulo de testing
-nos ofrezca una manera de ejecutar nuestra prueba en un entorno controlado, de tal manera que pueda ejecutarlo y manejar la excepción.
+Si ejecuto el código que lanza error en el mismo test, se corta el flujo de ejecución. Lo que necesitamos es que el módulo de testing nos ofrezca una manera de ejecutar nuestra prueba en un entorno controlado, de tal manera que pueda ejecutarlo y manejar la excepción.
 
 por eso nuestro test debería hacer algo así:
 
